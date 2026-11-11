@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 id="ner" class="title">Hello World</h1>
+        <p class="subtitle">My first website with</p>
+
+        <button onclick="urjih()" class="button is-danger">urjih</button>
+        <button onclick="hasah()" class="button is-link">hasah</button>
+        <button onclick="nemeh()" class="button is-success">nemeh</button>
+        <button onclick="huvaah()" class="button is-success">huvaah</button>
+      </div>
+      <h1>id</h1>
+      <h1 id="orolt">1</h1>
+      <div>
+        <button onclick="addnumber()" class="button is-success">
+          TOO NEMEH
+        </button>
+      </div>
+      <div>
+        <h1>ner solih</h1>
+        <button onclick="nersolih()" class="button is-success">
+          ner solih
+        </button>
+      </div>
+      <div>
+        <h1>NER class solih</h1>
+        <button onclick="activate()" class="button is-success">active</button>
+        <button onclick="deactivate()" class="button is-success">
+          deactive
+        </button>
+      </div>
+      <h1>daalgavar</h1>
+      <div class="hp">
+        <div id="1" class="aa"></div>
+        <div id="2" class="aa"></div>
+        <div id="3" class="aa"></div>
+        <div id="4" class="aa"></div>
+        <div id="5" class="aa"></div>
+      </div>
+      <button onclick="heal()" class="button is-success">HEAL</button>
+      <button onclick="attack()" class="button is-danger">ATTACK</button>
+    </section>
+    <h1>inputees utga avah</h1>
+    <h1 id="solih" class="title">oorchlogdoh heseg</h1>
+    <div class="GG">
+      <div class="control">
+        <input
+          id="avah"
+          class="input is-focused"
+          type="text"
+          placeholder="Focused input"
+        />
+      </div>
+      <div>
+        <button onclick="changeTitle()" class="button is-warning is-dark">
+          SENT
+        </button>
+      </div>
+    </div>
+    <script>
+      const solih = document.getElementById("solih");
+      const avah = document.getElementById("avah");
+      const changeTitle = () => {
+        solih.textContent = avah.value;
+        avah.value = "";
+      };
+
+      let lasthealth = 5;
+      const attack = () => {
+        let Healthbar = document.getElementById(lasthealth);
+        lasthealth = lasthealth - 1;
+        Healthbar.classList.remove("aa");
+      };
+
+      const heal = () => {
+        let Healthbar = document.getElementById(lasthealth);
+        lasthealth = lasthealth + 1;
+        Healthbar.classList.add("aa");
+      };
+
+      // const title = document.getElementById("ner");
+      // const activate = () => {
+      //   title.classList.add("has-text-warning");
+      // };
+      // const deactivate = () => {
+      //   title.classList.remove("has-text-warning");
+      // };
+      // let name = prompt("tanii ner ");
+      // const nersolih = () => {
+      //   ner.textContent = "HELLO  " + name;
+      // };
+      const oroltbarih = document.getElementById("orolt");
+      let number = 1;
+      const addnumber = () => {
+        number = number + 1;
+        oroltbarih.textContent = number;
+      };
+      let a = 10;
+      const red = () => {
+        console.log("RED");
+      };
+      const blue = () => {
+        console.log("BLUE");
+      };
+      const green = () => {
+        console.log("GREEN");
+      };
+      const nemeh = () => {
+        let a = Number(prompt("a toog bich"));
+        let b = Number(prompt("b toog bich"));
+        alert("niilber " + (a + b));
+      };
+      const hasah = () => {
+        let a = Number(prompt("a toog bich"));
+        let b = Number(prompt("b toog bich"));
+        alert("ylgavar " + (a - b));
+      };
+      const urjih = () => {
+        let a = Number(prompt("a toog bich"));
+        let b = Number(prompt("b toog bich"));
+        alert("urjver " + a * b);
+      };
+      const huvaah = () => {
+        let a = Number(prompt("a toog bich"));
+        let b = Number(prompt("b toog bich"));
+        alert("ylgavar " + a / b);
+      };
+    </script>
+  </body>
+</html>

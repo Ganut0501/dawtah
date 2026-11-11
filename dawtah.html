@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="PASS" class="PASS">
+      <input id="n" class="input is-link" type="text" placeholder="NAME" />
+      <input id="g" class="input is-primary" type="text" placeholder="GMAIL" />
+      <input id="a" class="input is-warning" type="text" placeholder="AGE" />
+      <input id="c" class="input is-danger" type="text" placeholder="class" />
+      <button onclick="changeTitle()" class="button is-warning">ENTER</button>
+    </section>
+    <main id="main" class="NONE">
+      <div id="N" class="has-text-warning-light">NAME :</div>
+      <div id="G" class="has-text-warning-light">GMAIL :</div>
+      <div id="A" class="has-text-warning-light">AGE :</div>
+      <div id="C" class="has-text-warning-light">CLASS :</div>
+    </main>
+    <h1 class="has-text-primary">nohtsol shalgah</h1>
+
+    <section>
+      <div>
+        <h1>ЭЕШ ОНОО</h1>
+        <div>
+          <input
+            id="onoo"
+            class="input is-medium"
+            type="text"
+            placeholder="TA ONOOGOO BICHNE UU "
+          />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>NOHTOL SHALGAH</h1>
+    </section>
+    <script>
+      // GUYJHKFTUYFUYTHFUOTFOUYFVTYKHFGVTYUHGFVYKTHFGVUYTHFGUYFGUYJHFHG;AIOHFG;IEUKRHGIEUKRHGLIQEURKGH;QIEKUHRAGKDJ
+      // DASGAL 1 11/06
+      // const age = 20;
+      // const hasTicket = true;
+      // if (age >= 18 && hasTicket) {
+      //   console.log("tawtai moril");
+      // } else {
+      //   console.log("oruulahgui ee");
+      // }
+      // DASGAL 2
+
+      // // ONDOR JIL OLOH DAALGAVAR
+      // let jil = Number(prompt("ymar negen on oruul"));
+      // if (jil % 4 === 0) {
+      //   if (jil % 100 === 0) {
+      //     if (jil % 400 === 0) {
+      //       alert(" mon ");
+      //     } else {
+      //       alert("bish");
+      //     }
+      //   } else {
+      //     alert("ondor jil mon");
+      //   }
+      // } else {
+      //   alert("ondor jil bish");
+      // }
+      // // ONOO BICHIJ HARIULT OGOH
+      // const onoo = document.getElementById("onoo");
+      // // let score = Number(onoo.value);
+      // let score = Number(prompt("ta onoogoo bichne uu"));
+      // if (score > 700) {
+      //   console.log("MNUMS");
+      //   alert("MNUMS");
+      // } else if (score > 600) {
+      //   console.log("NUM");
+      //   alert("MUN");
+      // } else if (score > 500) {
+      //   console.log("MUST");
+      //   alert("MUST");
+      // } else if (score < 500) {
+      //   console.log("ICH");
+      //   alert("ICH");
+      // }
+      // PASSPORT HESEG BOGLUULEH
+      // const N = document.getElementById("N");
+      // const n = document.getElementById("n");
+      // const G = document.getElementById("G");
+      // const g = document.getElementById("g");
+      // const A = document.getElementById("A");
+      // const a = document.getElementById("a");
+      // const C = document.getElementById("C");
+      // const c = document.getElementById("c");
+      // const pas = document.getElementById("PASS");
+
+      // const changeTitle = () => {
+      //   N.textContent = "NAME :" + n.value;
+      //   n.value = "";
+      //   G.textContent = "GMAIL :" + g.value;
+      //   g.value = "";
+      //   A.textContent = "AGE :" + a.value;
+      //   a.value = "";
+      //   C.textContent = "CLASS  :" + c.value; //jdfbgujkabrfd
+      //   c.value = "";
+      //   PASS.classList.add("NONE");
+      //   document.getElementById("main").classList.remove("NONE");
+      // };
+      //;ifdpghl;sokuhjfdgnuidkgfhguigkdfhisulthglkughnbiuklrsgfjhbnukrjdtfhgnb;sukrtdjfhgbn;srikudtfjghnbv.lsukdgjbn kurdjmfgnvb ki.dutjfgnb
+      // odooo dawtalt uzeh gej bn
+
+      // Дасгал 1. Нэмэх
+      // 1-ээс 5 хүртэлх тоог нэмж, нийлбэрийг хэвлэ.
+      // Хүлээгдэж буй гаралт: 15
+      // console.log("--- Дасгал 1 ---");
+      // let sum = 0;
+      // //console.log(sum);
+      // Давталтаа энд бичнэ үү
+
+      let sum = 0;
+      for (let i = 1; i <= 5; i++) {
+        sum = sum + i;
+      }
+      console.log(sum);
+      // ----------------------------------------------------------------
+      // Дасгал 2. Хасах
+      // 20-оос 1, 2, 3, 4, 5 тоог дараалан хасаж, үлдэгдлийг хэвлэ.
+      // Хүлээгдэж буй гаралт: 5
+      // ----------------------------------------------------------------
+      //console.log("--- Дасгал 2 ---");
+      //let result = 20;
+      // Давталтаа энд бичнэ үү
+      let num = 20;
+      for (let i = 1; i <= 5; i++) {
+        num -= i;
+        console.log(num);
+      }
+      // ----------------------------------------------------------------
+      // Дасгал 3. Үржих
+      // 5-ын үржих хүснэгтийг 1-ээс 5 хүртэл хэвлэ.
+      // Хүлээгдэж буй гаралт:
+      // 5 x 1 = 5
+      // 5 x 2 = 10
+      // 5 x 3 = 15
+      // 5 x 4 = 20
+      // 5 x 5 = 25
+      // ----------------------------------------------------------------
+      // console.log("--- Дасгал 3 ---")
+      // Кодоо энд бичнэ үү
+      for (i = 1; i <= 5; i++) {
+        console.log("5 x " + i + " = " + i * 5);
+      }
+      // ----------------------------------------------------------------
+      // Дасгал 4. Хуваах
+      // 80-ийг 2-т 4 удаа дараалан хувааж, хариу бүрийг хэвлэ.
+      // Хүлээгдэж буй гаралт: 40, 20, 10, 5
+      // ----------------------------------------------------------------
+      //console.log("--- Дасгал 4 ---");
+      //let number = 80;
+      // Давталтаа энд бичнэ үү
+      let gun = 80;
+      for (i = 1; i < 5; i++) {
+        gun /= 2;
+        console.log("Дасгал 4 " + gun);
+      }
+      // ----------------------------------------------------------------
+      // ----------------------------------------------------------------
+      // Дасгал 5. Тэгш тоо
+      // 2-оос 10 хүртэлх тэгш тоог хэвлэ.
+      // Хүлээгдэж буй гаралт: 2, 4, 6, 8, 10
+      // ----------------------------------------------------------------
+      //console.log("--- Дасгал 5 ---");
+
+      // Кодоо энд бичнэ үү
+    </script>
+  </body>
+</html>

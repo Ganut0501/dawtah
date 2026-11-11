@@ -1,0 +1,25 @@
+.hp {
+  display: flex;
+  background-color: azure;
+  width: 500px;
+  height: 40px;
+}
+.aa {
+  background-color: green;
+  width: 100px;
+  height: 40px;
+}
+.GG {
+  display: flex;
+}
+.PASS {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.NONE {
+  display: none;
+}
+.N {
+  color: aqua;
+}
