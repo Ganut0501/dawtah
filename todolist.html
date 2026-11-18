@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello Bulma!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <div class="content is-medium">
+      <h1>Өглөөний мэнд!</h1>
+      <p>Том зорилгыг жижиг алхмуудад хуваа. Өнөөдрийн нэг алхмаа хий.</p>
+    </div>
+
+    <main>
+      <div style="width: 30vh; margin-top: 17vh; margin-left: 13vh">
+        <div style="display: flex">
+          <input
+            id="input"
+            class="input is-primary"
+            type="text"
+            placeholder="Хийх ажлын жагсаалт нэмээрэй."
+          /><button onclick="nemeh()" class="button is-danger is-dark">
+            Нэмэх
+          </button>
+        </div>
+        <div id="nemelt"></div>
+        <button class="button is-link">Clear</button>
+      </div>
+    </main>
+    <script>
+      const ToDo = [];
+      const input = document.getElementById("input");
+      const nemelt = document.getElementById("nemelt");
+      const nemeh = () => {
+        if (input.value === "") return;
+        ToDo.push(input.value);
+        console.log(ToDo);
+        input.value = "";
+        uildel();
+      };
+      const uildel = () => {
+        nemelt.textContent = "";
+        for (let i = 0; i < ToDo.length; i++) {
+          const newDiv = document.createElement("div");
+          newDiv.textContent = ToDo[i];
+          newDiv.classList.add("box");
+          nemelt.appendChild(newDiv);
+        }
+      };
+    </script>
+  </body>
+</html>

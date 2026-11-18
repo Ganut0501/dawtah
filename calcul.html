@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="calcul.css" />
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline">Hello GANUT !</h1>
+    <div class="calculator">
+      <div class="calculatorinput">
+        <div id="garalt"></div>
+      </div>
+
+      <div class="buttons">
+        <button onclick="getAction(cancel)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-delete preview-icon"
+          >
+            <path
+              d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"
+            />
+            <path d="m12 9 6 6" />
+            <path d="m18 9-6 6" />
+          </svg>
+        </button>
+        <button onclick="getAction(clear)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-circle-x preview-icon"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="m15 9-6 6" />
+            <path d="m9 9 6 6" />
+          </svg>
+        </button>
+        <button onclick="getAction(huvi)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-percent preview-icon"
+          >
+            <line x1="19" x2="5" y1="5" y2="19" />
+            <circle cx="6.5" cy="6.5" r="2.5" />
+            <circle cx="17.5" cy="17.5" r="2.5" />
+          </svg>
+        </button>
+        <button onclick="getAction(huvaah)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-divide preview-icon"
+          >
+            <circle cx="12" cy="6" r="1" />
+            <line x1="5" x2="19" y1="12" y2="12" />
+            <circle cx="12" cy="18" r="1" />
+          </svg>
+        </button>
+        <button onclick="getNumber(7)" class="buttonsbutton">7</button>
+        <button onclick="getNumber(8)" class="buttonsbutton">8</button>
+        <button onclick="getNumber(9)" class="buttonsbutton">9</button>
+        <button onclick="getAction(urjih)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x preview-icon"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+        <button onclick="getNumber(4)" class="buttonsbutton">4</button>
+        <button onclick="getNumber(5)" class="buttonsbutton">5</button>
+        <button onclick="getNumber(6)" class="buttonsbutton">6</button>
+        <button onclick="getAction(hasah)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-minus preview-icon"
+          >
+            <path d="M5 12h14" />
+          </svg>
+        </button>
+        <button onclick="getNumber(1)" class="buttonsbutton">1</button>
+        <button onclick="getNumber(2)" class="buttonsbutton">2</button>
+        <button onclick="getnumber(3)" class="buttonsbutton">3</button>
+        <button onclick="getAction(nemeh)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-plus preview-icon"
+          >
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+          </svg>
+        </button>
+        <button onclick="getnumber(0)" class="buttonsbutton">0</button>
+        <button onclick="getnumber(0)" class="buttonsbutton">00</button>
+        <button onclick="getnumber(0)" class="buttonsbutton">000</button>
+        <button onclick="getAction(tentsuu)" class="buttonsoperator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-equal preview-icon"
+          >
+            <line x1="5" x2="19" y1="9" y2="9" />
+            <line x1="5" x2="19" y1="15" y2="15" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="calcul.js"></script>
+  </body>
+</html>
