@@ -1,0 +1,13 @@
+.card {
+  width: 400px;
+  height: 500px;
+  margin: 90px 90px;
+}
+.movie-card img,
+img {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* Киноны постерийн сонгодог харьцаа (өргөн:өндөр) */
+  object-fit: cover; /* Хүрээг дүүргэнэ, гажилт үүсгэхгүй */
+  object-position: top; /* Хүн, дүрийн толгой талыг тайрахгүй байхад тусална */
+  display: block;
+}

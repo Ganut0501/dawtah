@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="kino.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div
+      id="M-container"
+      style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 90px"
+    ></div>
+
+    <script>
+      const movies = [
+        {
+          name: "Spider-Man No Way Home",
+          releaseDate: "December 17, 2021",
+          cast: [
+            "Tom Holland",
+            "Zendaya",
+            "Benedict Cumberbatch",
+            "Jacob Batalon",
+            "Marisa Tomei",
+            "Andrew Garfield",
+            "Tobey Maguire",
+          ],
+          imdbScore: "8.1",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPt_dPTEs6RHOp73cI62Gz8fG8VdK83fZQYxLyKg7VyA&s=10",
+        },
+        {
+          name: "Avatar: The Last Airbender",
+          releaseDate: "Feb 21, 2005",
+          cast: ["Aang", "Katara", "Sokka", "Zuko", "Toph", "Appa", "Suki"],
+          imdbScore: "9.3",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQStw1UU4bwq2fXEiW5YfA8P9OdNiI3-heBn3DWSLGe7g&s=10",
+        },
+        {
+          name: "Spider-Man: Into the Spider-Verse",
+          releaseDate: "2018-12-14",
+          cast: ["Shameik Moore", "Jake Johnson", "Hailee Steinfeld"],
+          imdbScore: "8.4",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGL_IyfdxyaXH1HcIaRKj0uIoJMXispZHKOM70IMXaEg&s=10",
+        },
+        {
+          name: "How to Train Your Dragon",
+          releaseDate: "2010-03-26",
+          cast: ["Jay Baruchel", "Gerard Butler", "America Ferrera"],
+          imdbScore: "8.1",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwhr-uKVuQ-sjTzbU-rKw7srgldW3szahB_YaLLIInHA&s=10",
+        },
+        {
+          name: "Big Hero 6",
+          releaseDate: "2014-11-07",
+          cast: ["Ryan Potter", "Scott Adsit", "Jamie Chung"],
+          imdbScore: "7.8",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZK75-EQgAtMmW7YTat8eBcNRsGSQ8A_tp0ZA5efGPA&s=10",
+        },
+        {
+          name: "Puss in Boots: The Last Wish",
+          releaseDate: "2022-12-21",
+          cast: ["Antonio Banderas", "Salma Hayek", "Harvey"],
+          imdbScore: "7.8",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRt8sX77ghZac-a1mqgtl_pHyE2Pg4C4KBfMLNhTFZ_w&s=10",
+        },
+        {
+          name: "Doctor Strange",
+          releaseDate: "2016-11-04",
+          cast: ["Benedict Cumberbatch", "Chiwetel Ejiofor, Rachel"],
+          imdbScore: "7.5",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkgz2ATGoJQdeg6zMHsTgWix5Bmt5IqsWV9xfJsWPc2A&s=10",
+        },
+        {
+          name: "Avengers: Infinity War",
+          releaseDate: "2018-04-27",
+          cast: [
+            "Robert Downey Jr.",
+            "Chris Hemsworth",
+            "Mark Ruffalo",
+            "Chris Evans",
+          ],
+          imdbScore: "8.4",
+          img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTugFdcHZV48iT269DwhLx5K0QFTDM0kPQ_Irx8kgC1vw&s=10",
+        },
+        {
+          name: "Ratatouille",
+          releaseDate: "2007-06-29",
+          cast: ["atton Oswalt", "Ian Holm", "Lou Romano"],
+          imdbScore: "8.1",
+          img: "https://images.openai.com/static-rsc-4/rl9S4HB4gls2n2NT9tRc-O-Itoci4e6kEaanISGcT9_wFuNcy5NAEqy4y-OCcY-ezlk1AYDfiMGSf8TGVlFw-rlu50LH3m7e2Aga9e4LjnEVRh1VeMncnoQobZKIT5PlmELroZNcwexsZnDRc3vz_06UiJ_nVrZCGS5wZIo04iU?purpose=inline",
+        },
+      ];
+      const container = document.getElementById("M-container");
+
+      for (let i = 0; i < movies.length; i++) {
+        const movie = movies[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const title = document.createElement("h2");
+        const releaseDate = document.createElement("p");
+        const cast = document.createElement("p");
+        const score = document.createElement("div");
+        const image = document.createElement("img");
+
+        title.textContent = movie.name;
+        releaseDate.textContent = movie.releaseDate;
+        cast.textContent = "Cast: " + movie.cast.join(", ");
+        score.textContent = "IMDb: " + movie.imdbScore;
+
+        image.src = movie.img;
+        image.alt = movie.name;
+
+        card.appendChild(title);
+        card.appendChild(releaseDate);
+        card.appendChild(cast);
+        card.appendChild(score);
+        card.appendChild(image);
+
+        container.appendChild(card);
+      }
+    </script>
+  </body>
+</html>

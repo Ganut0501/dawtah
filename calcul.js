@@ -3,5 +3,5 @@ let = firstNumber;
 let = secondNumber;
 let action = "";
 const getNumber = (number) => {
-    if (action && firstNumber > 0 )
-}
+  if (action && firstNumber > 0);
+};

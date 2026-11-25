@@ -33,7 +33,7 @@
   width: 90px;
   height: 90px;
 }
-/* Calculator container */
+
 .calculator {
   width: 320px;
   padding: 20px;
@@ -43,7 +43,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Display screen */
 .calculatorinput {
   width: 100%;
   height: 70px;
@@ -59,14 +58,12 @@
   outline: none;
 }
 
-/* Button grid */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-/* All buttons */
 .buttonsbutton {
   height: 60px;
   border: none;
